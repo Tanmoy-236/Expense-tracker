@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExpenseTracker - Manage Your Money</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">✓</span>
+                <span>Expense<span>Tracker</span></span>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#about" class="nav-link">About</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="login-btn">Login</button>
+                <button class="primary-btn nav-get-started">Get Started</button>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation menu">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge"><span>↗</span>Take Control of Your Money</div>
+                    <h1>Track Your Expenses,<span>Build a Better Future</span></h1>
+                    <p class="hero-description">ExpenseTracker helps you manage your money, track your spending, set budgets and achieve your financial goals — all in one simple and powerful platform.</p>
+                    <div class="hero-buttons">
+                        <button class="primary-btn">Get Started Free <span>→</span></button>
+                        <button class="secondary-btn" id="demoBtn"><span class="play-icon">▶</span>Watch Demo</button>
+                    </div>
+                    <div class="hero-benefits">
+                        <div class="benefit"><div class="benefit-icon">✓</div><div><strong>Secure</strong><small>Your data is safe</small></div></div>
+                        <div class="benefit"><div class="benefit-icon">⚡</div><div><strong>Easy to Use</strong><small>Simple & clean UI</small></div></div>
+                        <div class="benefit"><div class="benefit-icon">▣</div><div><strong>Always Accessible</strong><small>On all your devices</small></div></div>
+                    </div>
+                </div>
+
+                <div class="dashboard-preview">
+                    <div class="dashboard-window">
+                        <aside class="dashboard-sidebar">
+                            <div class="dashboard-logo"><span>✓</span>ExpenseTracker</div>
+                            <a href="#" class="sidebar-link active"><span>▦</span>Dashboard</a>
+                            <a href="#" class="sidebar-link"><span>↔</span>Transactions</a>
+                            <a href="#" class="sidebar-link"><span>◴</span>Budgets</a>
+                            <a href="#" class="sidebar-link"><span>●</span>Categories</a>
+                            <a href="#" class="sidebar-link"><span>▥</span>Reports</a>
+                            <a href="#" class="sidebar-link"><span>◇</span>Goals</a>
+                            <a href="#" class="sidebar-link"><span>⚙</span>Settings</a>
+                        </aside>
+
+                        <div class="dashboard-main">
+                            <div class="dashboard-header">
+                                <h3>Dashboard</h3>
+                                <div class="dashboard-user">Apr 2025 <span>👤</span></div>
+                            </div>
+
+                            <div class="stats-grid">
+                                <div class="stat-card"><small>Total Balance</small><strong>₹12,450</strong><span class="positive">↑ 12% from last month</span></div>
+                                <div class="stat-card"><small>Total Income</small><strong>₹32,000</strong><span class="positive">↑ 8% from last month</span></div>
+                                <div class="stat-card"><small>Total Expenses</small><strong>₹19,550</strong><span class="negative">↑ 5% from last month</span></div>
+                            </div>
+
+                            <div class="dashboard-charts">
+                                <div class="chart-card">
+                                    <div class="chart-title"><strong>Income vs Expenses</strong><span>View</span></div>
+                                    <div class="fake-chart">
+                                        <div class="chart-line line-one"></div>
+                                        <div class="chart-line line-two"></div>
+                                        <div class="chart-bars"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                                    </div>
+                                </div>
+                                <div class="chart-card category-chart">
+                                    <div class="chart-title"><strong>Category-wise Spending</strong><span>View All</span></div>
+                                    <div class="donut-area">
+                                        <div class="donut"><span>₹19,550</span></div>
+                                        <div class="category-list">
+                                            <span><i class="dot food"></i>Food</span>
+                                            <span><i class="dot transport"></i>Transport</span>
+                                            <span><i class="dot shopping"></i>Shopping</span>
+                                            <span><i class="dot bills"></i>Bills</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recent-transactions">
+                                <div class="transaction-header"><strong>Recent Transactions</strong><span>View All</span></div>
+                                <div class="transaction"><div class="transaction-icon food-icon">F</div><div class="transaction-info"><strong>Food</strong><small>Apr 27, 2025</small></div><strong class="expense">-₹350</strong></div>
+                                <div class="transaction"><div class="transaction-icon salary-icon">S</div><div class="transaction-info"><strong>Salary</strong><small>Apr 25, 2025</small></div><strong class="income">+₹20,000</strong></div>
+                                <div class="transaction"><div class="transaction-icon transport-icon">B</div><div class="transaction-info"><strong>Bus Fare</strong><small>Apr 24, 2025</small></div><strong class="expense">-₹40</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section" id="features">
+            <div class="container">
+                <div class="section-heading">
+                    <span>EVERYTHING YOU NEED</span>
+                    <h2>Powerful Features for Smarter Money Management</h2>
+                    <p>From tracking daily expenses to planning your future, ExpenseTracker gives you everything you need to stay in control of your finances.</p>
+                </div>
+
+                <div class="features-grid">
+                    <article class="feature-card feature-green">
+                        <div class="feature-number">1</div>
+                        <h3>Dashboard</h3>
+                        <p>Get a complete overview of your finances. See your total balance, income, expenses and monthly spending at a glance.</p>
+                        <div class="mini-dashboard">
+                            <div><small>Total Balance</small><strong>₹12,450</strong></div>
+                            <div><small>Total Income</small><strong>₹32,000</strong></div>
+                            <div class="progress-box"><span>This Month's Spending</span><div class="progress"><i style="width: 65%"></i></div><small>65%</small></div>
+                        </div>
+                    </article>
+
+                    <article class="feature-card feature-blue">
+                        <div class="feature-number">2</div>
+                        <h3>Add Transaction</h3>
+                        <p>Quickly add your income or expense with category, amount, date, payment method and description.</p>
+                        <div class="mini-form">
+                            <div class="type-buttons"><button class="expense-active">Expense</button><button>Income</button></div>
+                            <label>Amount</label><input type="text" value="₹350" readonly>
+                            <label>Category</label><select><option>Food</option></select>
+                            <button class="mini-submit">Add Transaction</button>
+                        </div>
+                    </article>
+
+                    <article class="feature-card feature-purple">
+                        <div class="feature-number">3</div>
+                        <h3>Expense Categories</h3>
+                        <p>Organize your spending with custom categories. Track where your money goes and find areas to save more.</p>
+                        <div class="categories-mini">
+                            <div><span>🍔</span>Food<strong>₹6,250</strong></div>
+                            <div><span>🚌</span>Transport<strong>₹3,510</strong></div>
+                            <div><span>🛍️</span>Shopping<strong>₹2,730</strong></div>
+                            <div><span>💡</span>Bills<strong>₹2,340</strong></div>
+                        </div>
+                    </article>
+
+                    <article class="feature-card feature-orange">
+                        <div class="feature-number">4</div>
+                        <h3>Transaction History</h3>
+                        <p>View, search and filter your transactions. Edit or delete entries whenever you need.</p>
+                        <div class="transaction-mini">
+                            <input type="text" placeholder="Search transactions...">
+                            <div class="filter-buttons"><button>All</button><button>Income</button><button>Expense</button></div>
+                            <div class="mini-transaction">Food<strong>-₹350</strong></div>
+                            <div class="mini-transaction">Salary<strong class="income">+₹20,000</strong></div>
+                            <div class="mini-transaction">Bus Fare<strong>-₹40</strong></div>
+                        </div>
+                    </article>
+
+                    <article class="feature-card feature-pink">
+                        <div class="feature-number">5</div>
+                        <h3>Charts & Visual Reports</h3>
+                        <p>Understand your spending patterns with beautiful charts. See monthly trends, category breakdowns and income vs expenses.</p>
+                        <div class="report-mini">
+                            <div class="bar-chart"><i style="height: 40%"></i><i style="height: 65%"></i><i style="height: 50%"></i><i style="height: 80%"></i><i style="height: 60%"></i><i style="height: 90%"></i></div>
+                            <div class="report-legend">Income &nbsp; • &nbsp; Expenses</div>
+                        </div>
+                    </article>
+
+                    <article class="feature-card feature-teal">
+                        <div class="feature-number">6</div>
+                        <h3>Budget</h3>
+                        <p>Set monthly and category budgets. Get real-time updates on your spending and see how much is remaining.</p>
+                        <div class="budget-mini">
+                            <div class="budget-title">Monthly Budget<strong>65%</strong></div>
+                            <div class="budget-progress"><i style="width: 65%"></i></div>
+                            <small>₹19,550 / ₹30,000</small>
+                            <div class="budget-item">Food<span>78%</span></div>
+                            <div class="budget-item">Transport<span>70%</span></div>
+                            <div class="budget-item">Shopping<span>68%</span></div>
+                        </div>
+                    </article>
+
+                    <article class="feature-card feature-indigo">
+                        <div class="feature-number">7</div>
+                        <h3>Reports</h3>
+                        <p>Generate daily, weekly, monthly or yearly reports to track your progress and make better financial decisions.</p>
+                        <div class="reports-mini">
+                            <div class="report-tabs"><button class="active">Daily</button><button>Weekly</button><button>Monthly</button><button>Yearly</button></div>
+                            <div class="report-values">
+                                <div><small>Total Income</small><strong>₹32,000</strong></div>
+                                <div><small>Expenses</small><strong>₹19,550</strong></div>
+                                <div><small>Net Savings</small><strong>₹12,450</strong></div>
+                            </div>
+                            <button class="download-btn">↓ Download Report</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-section" id="how-it-works">
+            <div class="container">
+                <div class="section-heading">
+                    <span>HOW IT WORKS</span>
+                    <h2>Start Managing Your Money in 3 Simple Steps</h2>
+                </div>
+                <div class="steps">
+                    <div class="step"><div class="step-number">01</div><h3>Add Your Transactions</h3><p>Enter your income and expenses in just a few seconds.</p></div>
+                    <div class="step-line"></div>
+                    <div class="step"><div class="step-number">02</div><h3>Track Your Spending</h3><p>Use categories, charts and reports to understand your spending.</p></div>
+                    <div class="step-line"></div>
+                    <div class="step"><div class="step-number">03</div><h3>Reach Your Goals</h3><p>Create budgets and make smarter financial decisions.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section" id="about">
+            <div class="container cta-container">
+                <div class="cta-logo"><span>✓</span>ExpenseTracker</div>
+                <div class="cta-content"><h2>Start managing your money today</h2><p>It's free, easy and takes less than a minute.</p><button class="primary-btn">Get Started Free <span>→</span></button></div>
+                <div class="cta-message">Better<br>Money Habits<br><span>A Brighter Future</span></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-logo"><span>✓</span>ExpenseTracker</div>
+            <div class="footer-links"><a href="#home">Home</a><a href="#features">Features</a><a href="#how-it-works">How It Works</a><a href="#about">About</a></div>
+            <p>© 2025 ExpenseTracker. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="modal" id="demoModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">×</button>
+            <div class="demo-icon">▶</div>
+            <h2>ExpenseTracker Demo</h2>
+            <p>Your interactive product demo will be added here in the next stage.</p>
+            <button class="primary-btn" id="modalButton">Get Started</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

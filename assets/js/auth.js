@@ -40,16 +40,16 @@ function logout() {
     sessionStorage.removeItem(AUTH_KEY);
 
     // Replace the current app page so Back cannot return to the protected page.
-    window.location.replace("../../index.html");
+    window.location.replace(new URL("../../index.html", document.baseURI).href);
 }
 
 function goToDashboard() {
     // Replace the login page instead of adding another history entry.
-    window.location.replace("../dashboard/dashboard.html");
+    window.location.replace(new URL("../dashboard/dashboard.html", document.baseURI).href);
 }
 
 if (document.body && document.body.dataset.protected === "true" && !isAuthenticated()) {
-    window.location.replace("../auth/login.html");
+    window.location.replace(new URL("../auth/login.html", document.baseURI).href);
 }
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -8,6 +8,12 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/landing-reference.css">
+    <script>
+        (function () {
+            const loggedIn = localStorage.getItem("expenseTrackerAuth") || sessionStorage.getItem("expenseTrackerAuth");
+            if (loggedIn) window.location.replace("dashboard.html");
+        })();
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,8 +36,8 @@
         </nav>
 
         <div class="nav-actions">
-            <button class="login-btn" type="button">Login</button>
-            <button class="primary-btn nav-get-started" type="button">Get Started</button>
+            <button class="login-btn" id="loginButton" type="button">Login</button>
+            <button class="primary-btn nav-get-started" id="getStartedButton" type="button">Get Started</button>
         </div>
 
         <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Open navigation menu">☰</button>
@@ -62,7 +68,7 @@
                 </p>
 
                 <div class="hero-buttons">
-                    <button class="primary-btn" type="button">
+                    <button class="primary-btn get-started-action" type="button">
                         Get Started Free <span>→</span>
                     </button>
 
@@ -544,7 +550,7 @@
             <div class="cta-content">
                 <h2>Start managing your money today</h2>
                 <p>It's free, easy and takes less than a minute.</p>
-                <button class="primary-btn" type="button">
+                <button class="primary-btn get-started-action" type="button">
                     Get Started Free <span>→</span>
                 </button>
             </div>
@@ -591,5 +597,6 @@
 </div>
 
 <script src="js/script.js"></script>
+<script src="js/auth.js"></script>
 </body>
 </html>

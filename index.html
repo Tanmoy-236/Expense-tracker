@@ -8,10 +8,28 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/landing-reference.css">
+    <!-- Startup routing: ONLY an existing signed-in session goes to the dashboard.
+         A visitor without a session stays on this landing page. -->
     <script>
         (function () {
-            const loggedIn = localStorage.getItem("expenseTrackerAuth") || sessionStorage.getItem("expenseTrackerAuth");
-            if (loggedIn) window.location.replace("dashboard.html");
+            const AUTH_KEY = "expenseTrackerAuth";
+            function hasValidSession() {
+                try {
+                    const raw = localStorage.getItem(AUTH_KEY) || sessionStorage.getItem(AUTH_KEY);
+                    if (!raw) return false;
+                    const auth = JSON.parse(raw);
+                    return Boolean(auth && auth.email);
+                } catch (error) {
+                    localStorage.removeItem(AUTH_KEY);
+                    sessionStorage.removeItem(AUTH_KEY);
+                    return false;
+                }
+            }
+            if (hasValidSession()) {
+                window.location.replace("dashboard.html");
+            }
+            // IMPORTANT: do not redirect unauthenticated visitors to signup/login.
+            // index.html is always the public starting page.
         })();
     </script>
 

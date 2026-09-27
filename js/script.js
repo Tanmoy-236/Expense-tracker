@@ -72,12 +72,15 @@ window.addEventListener("scroll", function () {
 });
 
 function openLogin() {
-    // Replace the landing page in history so Back cannot return to it after login.
+    // Login should replace the landing page so a signed-in user cannot
+    // return to it through the normal Back button.
     window.location.replace("login.html");
 }
 
 function openSignup() {
-    window.location.replace("signup.html");
+    // Get Started is a normal navigation. The visitor should be able
+    // to return to the landing page until they actually log in.
+    window.location.href = "signup.html";
 }
 
 document.addEventListener("DOMContentLoaded", function () {

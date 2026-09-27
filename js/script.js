@@ -70,3 +70,30 @@ window.addEventListener("scroll", function () {
         }
     });
 });
+
+function openLogin() {
+    // Replace the landing page in history so Back cannot return to it after login.
+    window.location.replace("login.html");
+}
+
+function openSignup() {
+    window.location.replace("signup.html");
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const loginButton = document.getElementById("loginButton");
+    const getStartedButton = document.getElementById("getStartedButton");
+    const getStartedActions = document.querySelectorAll(".get-started-action");
+
+    if (loginButton) {
+        loginButton.addEventListener("click", openLogin);
+    }
+
+    if (getStartedButton) {
+        getStartedButton.addEventListener("click", openSignup);
+    }
+
+    getStartedActions.forEach(function (button) {
+        button.addEventListener("click", openSignup);
+    });
+});

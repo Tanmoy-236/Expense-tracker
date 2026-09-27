@@ -1,0 +1,326 @@
+/* Reference landing-page refinements
+   Keeps the page lightweight and compatible with the existing static setup. */
+
+:root {
+    --ref-green: #12b76a;
+    --ref-green-dark: #087a43;
+    --ref-dark: #071b17;
+    --ref-text: #101828;
+}
+
+.logo-icon,
+.cta-logo span {
+    position: relative;
+    border-radius: 8px 14px 8px 14px;
+    transform: rotate(-25deg);
+    background: linear-gradient(135deg, #20c77a, #0a9b55);
+    color: transparent;
+}
+
+.logo-icon::before,
+.cta-logo span::before,
+.dashboard-logo span::before,
+.footer-logo span::before {
+    content: "";
+    display: block;
+    width: 9px;
+    height: 16px;
+    border-radius: 100% 0 100% 0;
+    background: #20c77a;
+    transform: rotate(35deg);
+}
+
+.logo-icon::after,
+.cta-logo span::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 13px;
+    background: #087a43;
+    transform: rotate(42deg);
+    left: 12px;
+    top: 7px;
+}
+
+.hero {
+    min-height: 420px;
+    padding: 38px 0 28px;
+    background:
+        radial-gradient(circle at 78% 22%, rgba(20, 190, 108, .18), transparent 32%),
+        radial-gradient(circle at 18% 100%, rgba(20, 190, 108, .08), transparent 30%),
+        linear-gradient(115deg, #061b17 0%, #09251f 58%, #071b17 100%);
+}
+
+.hero-container {
+    grid-template-columns: 0.91fr 1.09fr;
+    gap: 42px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 4.5vw, 57px);
+    letter-spacing: -2px;
+    margin-bottom: 17px;
+}
+
+.hero-description {
+    font-size: 14px;
+    line-height: 1.75;
+    max-width: 490px;
+    margin-bottom: 22px;
+}
+
+.hero-buttons {
+    margin-bottom: 26px;
+}
+
+.hero-benefits {
+    gap: 13px;
+}
+
+.benefit {
+    padding-right: 13px;
+}
+
+.dashboard-window {
+    border-radius: 10px;
+    grid-template-columns: 110px 1fr;
+}
+
+.dashboard-sidebar {
+    padding: 14px 8px;
+}
+
+.dashboard-main {
+    padding: 14px;
+}
+
+.dashboard-header h3 {
+    font-size: 14px;
+}
+
+.features-section {
+    padding: 52px 0 48px;
+}
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-size: 28px;
+    margin: 7px 0 8px;
+}
+
+.section-heading p {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.features-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 13px;
+}
+
+.feature-card {
+    padding: 15px;
+    border-radius: 10px;
+    min-height: 350px;
+}
+
+.feature-card:nth-child(5) {
+    grid-column: span 2;
+}
+
+.feature-card:nth-child(6),
+.feature-card:nth-child(7) {
+    grid-column: span 1;
+}
+
+.feature-number {
+    width: 31px;
+    height: 31px;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.feature-card h3 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.feature-card > p {
+    font-size: 11px;
+    line-height: 1.55;
+    margin-bottom: 13px;
+}
+
+.feature-green { background: linear-gradient(145deg, #f2fcf7, #ffffff); }
+.feature-blue { background: linear-gradient(145deg, #f3f8ff, #ffffff); }
+.feature-purple { background: linear-gradient(145deg, #fbf6ff, #ffffff); }
+.feature-orange { background: linear-gradient(145deg, #fff9f2, #ffffff); }
+.feature-pink { background: linear-gradient(145deg, #fff7f8, #ffffff); }
+.feature-teal { background: linear-gradient(145deg, #f1fcfa, #ffffff); }
+.feature-indigo { background: linear-gradient(145deg, #f5f7ff, #ffffff); }
+
+.feature-card:nth-child(n) {
+    border-color: rgba(16, 24, 40, .08);
+}
+
+.feature-card:nth-child(n):hover {
+    transform: translateY(-3px);
+}
+
+.mini-dashboard,
+.mini-form,
+.categories-mini,
+.transaction-mini,
+.report-mini,
+.budget-mini,
+.reports-mini {
+    padding: 9px;
+    border-radius: 7px;
+    background: rgba(255,255,255,.8);
+}
+
+.mini-dashboard {
+    gap: 5px;
+}
+
+.mini-dashboard div {
+    padding: 6px;
+}
+
+.mini-dashboard strong {
+    font-size: 11px;
+}
+
+.mini-dashboard small {
+    font-size: 7px;
+}
+
+.mini-form label {
+    font-size: 7px;
+}
+
+.mini-form input,
+.mini-form select {
+    padding: 5px;
+    font-size: 8px;
+}
+
+.type-buttons button,
+.mini-submit {
+    font-size: 8px;
+}
+
+.categories-mini {
+    gap: 4px;
+}
+
+.categories-mini div {
+    padding: 5px;
+    font-size: 8px;
+}
+
+.categories-mini div span {
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #eff8f3;
+}
+
+.categories-mini strong {
+    font-size: 7px;
+}
+
+.transaction-mini input {
+    padding: 6px;
+    font-size: 7px;
+}
+
+.filter-buttons button {
+    padding: 4px 6px;
+}
+
+.mini-transaction {
+    font-size: 7px;
+    padding: 5px 0;
+}
+
+.report-mini {
+    height: 150px;
+}
+
+.report-tabs {
+    margin-bottom: 7px;
+}
+
+.report-tabs button {
+    font-size: 7px;
+    padding: 4px 6px;
+}
+
+.budget-title {
+    font-size: 9px;
+}
+
+.budget-item {
+    font-size: 7px;
+}
+
+.reports-mini {
+    min-height: 145px;
+}
+
+.download-btn {
+    background: #164c96;
+}
+
+.how-section {
+    padding: 55px 0;
+}
+
+.cta-section {
+    padding: 28px 0;
+}
+
+.cta-content h2 {
+    font-size: 21px;
+}
+
+.footer {
+    padding: 17px 0;
+}
+
+@media (max-width: 1050px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature-card:nth-child(n) {
+        grid-column: span 1;
+    }
+
+    .feature-card:nth-child(5) {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 760px) {
+    .hero {
+        padding: 45px 0;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card:nth-child(n) {
+        grid-column: span 1;
+    }
+}

@@ -324,3 +324,131 @@
         grid-column: span 1;
     }
 }
+
+/* Professional dashboard preview behavior */
+.dashboard-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-window {
+    width: 100%;
+    max-width: 690px;
+    transform: perspective(1200px) rotateY(-2deg);
+    box-shadow:
+        0 24px 55px rgba(0, 0, 0, .30),
+        0 4px 12px rgba(0, 0, 0, .12);
+    border: 1px solid rgba(98, 221, 162, .42);
+}
+
+@media (max-width: 760px) {
+    .dashboard-preview {
+        width: 100%;
+        margin: 8px auto 0;
+        padding: 0 8px;
+    }
+
+    .dashboard-window {
+        width: min(92%, 560px);
+        margin: 0 auto;
+        transform: none;
+        border-radius: 12px;
+        box-shadow:
+            0 18px 38px rgba(0, 0, 0, .22),
+            0 3px 10px rgba(0, 0, 0, .10);
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-preview {
+        padding: 0;
+        margin-top: 4px;
+    }
+
+    /* Keep the dashboard preview compact instead of filling the whole phone width. */
+    .dashboard-window {
+        width: min(84vw, 335px);
+        max-width: 335px;
+        margin: 0 auto;
+        border-radius: 11px;
+        box-shadow:
+            0 16px 32px rgba(0, 0, 0, .20),
+            0 2px 8px rgba(0, 0, 0, .08);
+    }
+
+    .dashboard-main {
+        padding: 8px;
+    }
+
+    .dashboard-header {
+        margin-bottom: 7px;
+    }
+
+    .dashboard-header h3 {
+        font-size: 10px;
+    }
+
+    .dashboard-user {
+        font-size: 6px;
+    }
+
+    .stats-grid {
+        gap: 4px;
+        margin-bottom: 5px;
+    }
+
+    .stat-card {
+        padding: 6px;
+        border-radius: 6px;
+    }
+
+    .stat-card strong {
+        font-size: 8px;
+    }
+
+    .dashboard-charts {
+        gap: 5px;
+        margin-bottom: 5px;
+    }
+
+    .chart-card {
+        padding: 6px;
+        border-radius: 6px;
+    }
+
+    .fake-chart {
+        height: 52px;
+    }
+
+    .donut {
+        width: 45px;
+        height: 45px;
+    }
+
+    .donut::before {
+        width: 30px;
+        height: 30px;
+    }
+
+    .recent-transactions {
+        border-radius: 6px;
+    }
+
+    .transaction-header {
+        padding: 6px;
+        font-size: 6px;
+    }
+
+    .transaction {
+        padding: 5px 6px;
+        gap: 5px;
+    }
+}
+
+/* Avoid an oversized preview on very small phones. */
+@media (max-width: 360px) {
+    .dashboard-window {
+        width: min(80vw, 290px);
+    }
+}

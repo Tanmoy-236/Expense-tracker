@@ -72,9 +72,9 @@ window.addEventListener("scroll", function () {
 });
 
 function openLogin() {
-    // Login should replace the landing page so a signed-in user cannot
-    // return to it through the normal Back button.
-    window.location.replace("pages/auth/login.html");
+    // Login is normal navigation so the browser Back button
+    // returns the visitor to the landing page.
+    window.location.href = "pages/auth/login.html";
 }
 
 function openSignup() {

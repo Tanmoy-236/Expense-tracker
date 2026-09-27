@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ExpenseTracker</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script>
+        (function () {
+            const loggedIn =
+                localStorage.getItem("expenseTrackerAuth") ||
+                sessionStorage.getItem("expenseTrackerAuth");
+
+            if (loggedIn) {
+                window.location.replace("dashboard.html");
+            }
+        })();
+    </script>
+</head>
+<body>
+
+<header class="auth-header">
+    <a href="index.html" class="auth-logo" aria-label="ExpenseTracker home">
+        <span class="leaf-logo"></span>
+        <span>Expense<span>Tracker</span></span>
+    </a>
+
+    <div class="auth-header-action">
+        <span>Don't have an account?</span>
+        <a href="signup.html" class="outline-btn">Create account</a>
+    </div>
+</header>
+
+<main class="auth-main">
+    <section class="login-card">
+
+        <div class="login-promo">
+            <div class="promo-decoration decoration-one"></div>
+            <div class="promo-decoration decoration-two"></div>
+
+            <div class="promo-content">
+                <h1>Take control of<br>your <span>finances</span></h1>
+
+                <p>
+                    Track your income, manage expenses,<br>
+                    set budgets and achieve your financial<br>
+                    goals — all in one place.
+                </p>
+
+                <div class="finance-visual">
+
+                    <div class="visual-window">
+                        <div class="visual-window-line"></div>
+                        <div class="visual-bars">
+                            <i style="height:35%"></i>
+                            <i style="height:54%"></i>
+                            <i style="height:73%"></i>
+                            <i style="height:92%"></i>
+                        </div>
+                    </div>
+
+                    <div class="money-card income-card">
+                        <div class="money-icon">↑</div>
+                        <span>Income</span>
+                        <strong>₹ 32,000</strong>
+                    </div>
+
+                    <div class="money-card expense-card">
+                        <div class="money-icon">↓</div>
+                        <span>Expenses</span>
+                        <strong>₹ 19,550</strong>
+                    </div>
+
+                    <div class="visual-donut">
+                        <span></span>
+                    </div>
+
+                    <div class="visual-list">
+                        <i></i><i></i><i></i>
+                    </div>
+
+                    <div class="visual-leaf leaf-one"></div>
+                    <div class="visual-leaf leaf-two"></div>
+                </div>
+
+                <div class="promo-features">
+                    <div>
+                        <span>▥</span>
+                        <strong>Track<br>Expenses</strong>
+                    </div>
+                    <div>
+                        <span>◎</span>
+                        <strong>Set<br>Budgets</strong>
+                    </div>
+                    <div>
+                        <span>◔</span>
+                        <strong>Achieve<br>Goals</strong>
+                    </div>
+                </div>
+
+                <div class="carousel-dots">
+                    <i class="active"></i>
+                    <i></i>
+                    <i></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="login-panel">
+            <div class="login-inner">
+
+                <h2>Welcome back</h2>
+                <p class="login-subtitle">Login to your ExpenseTracker account.</p>
+
+                <form id="loginForm" novalidate>
+
+                    <div class="field-group">
+                        <label for="email">Email</label>
+
+                        <div class="input-wrap">
+                            <span class="input-icon">✉</span>
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                autocomplete="email"
+                                placeholder="Enter your email address"
+                            >
+                        </div>
+
+                        <p class="field-error" id="emailError">
+                            <span>!</span> Please enter your email.
+                        </p>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="password">Password</label>
+
+                        <div class="input-wrap">
+                            <span class="input-icon">▣</span>
+                            <input
+                                id="password"
+                                name="password"
+                                type="password"
+                                autocomplete="current-password"
+                                placeholder="Enter your password"
+                            >
+                            <button class="password-toggle" id="passwordToggle" type="button" aria-label="Show password">◉</button>
+                        </div>
+
+                        <p class="field-error" id="passwordError">
+                            <span>!</span> Please enter your password.
+                        </p>
+                    </div>
+
+                    <div class="login-options">
+                        <label class="remember-label">
+                            <input id="rememberMe" type="checkbox" checked>
+                            <span class="custom-check">✓</span>
+                            <span>Remember me</span>
+                        </label>
+
+                        <a href="#" id="forgotPassword">Forgot password?</a>
+                    </div>
+
+                    <button class="login-submit" id="loginSubmit" type="submit">
+                        <span>Login</span>
+                        <strong>→</strong>
+                    </button>
+
+                    <div class="or-divider">
+                        <span></span>
+                        <em>OR</em>
+                        <span></span>
+                    </div>
+
+                    <button class="google-btn" id="googleLogin" type="button">
+                        <span class="google-g">G</span>
+                        Continue with Google
+                    </button>
+
+                    <p class="mobile-create">
+                        Don't have an account?
+                        <a href="signup.html">Create account</a>
+                    </p>
+
+                    <p class="login-status" id="loginStatus" role="status"></p>
+                </form>
+
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<script src="js/auth.js"></script>
+</body>
+</html>

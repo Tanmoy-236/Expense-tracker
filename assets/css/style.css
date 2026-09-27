@@ -1202,12 +1202,32 @@ a {
         display: none;
     }
 
+    /* Keep Login accessible on mobile.
+       Get Started stays available through the page CTA/menu flow. */
     .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-left: auto;
+        margin-right: 8px;
+    }
+
+    .nav-actions .login-btn {
+        display: inline-flex;
+        padding: 8px 14px;
+        min-height: 38px;
+        font-size: 13px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-actions .nav-get-started {
         display: none;
     }
 
     .mobile-menu-btn {
         display: block;
+        flex-shrink: 0;
     }
 
     .hero {

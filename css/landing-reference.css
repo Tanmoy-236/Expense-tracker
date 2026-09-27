@@ -452,3 +452,299 @@
         width: min(80vw, 290px);
     }
 }
+
+
+/* Premium mobile landing-page layout */
+@media (max-width: 760px) {
+    .container {
+        width: min(100% - 32px, 560px);
+    }
+
+    .navbar {
+        height: 64px;
+        position: sticky;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .logo-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .hero {
+        padding: 46px 0 54px;
+        background:
+            radial-gradient(circle at 85% 5%, rgba(20, 196, 115, .18), transparent 30%),
+            linear-gradient(145deg, #061713 0%, #0a2420 58%, #0d3028 100%);
+    }
+
+    .hero-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 38px;
+    }
+
+    .hero-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-badge {
+        margin: 0 auto 18px;
+        font-size: 11px;
+        padding: 7px 12px;
+    }
+
+    .hero h1 {
+        max-width: 430px;
+        margin: 0 auto 18px;
+        font-size: clamp(38px, 11vw, 50px);
+        line-height: 1.03;
+        letter-spacing: -1.7px;
+    }
+
+    .hero-description {
+        max-width: 430px;
+        margin: 0 auto 25px;
+        font-size: 14px;
+        line-height: 1.65;
+        color: #c9d9d5;
+    }
+
+    .hero-buttons {
+        width: min(100%, 390px);
+        margin: 0 auto 28px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .hero-buttons .primary-btn,
+    .hero-buttons .secondary-btn {
+        min-height: 50px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .hero-benefits {
+        width: min(100%, 430px);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .benefit {
+        min-width: 0;
+        padding: 0 8px;
+        border-right: 1px solid rgba(255,255,255,.12);
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 6px;
+    }
+
+    .benefit:last-child {
+        border-right: none;
+    }
+
+    .benefit-icon {
+        width: 31px;
+        height: 31px;
+        border-radius: 9px;
+        font-size: 12px;
+    }
+
+    .benefit strong {
+        font-size: 10px;
+    }
+
+    .benefit small {
+        display: none;
+    }
+
+    .dashboard-preview {
+        width: 100% !important;
+        max-width: none !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .dashboard-window {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        width: min(100%, 390px) !important;
+        max-width: 390px !important;
+        margin: 0 auto !important;
+        transform: none !important;
+        border-radius: 14px !important;
+        box-shadow:
+            0 24px 50px rgba(0, 0, 0, .28),
+            0 2px 10px rgba(0, 0, 0, .12) !important;
+        border: 1px solid rgba(117, 231, 180, .34) !important;
+    }
+
+    .dashboard-sidebar {
+        display: none !important;
+    }
+
+    .dashboard-main {
+        padding: 13px !important;
+    }
+
+    .dashboard-header {
+        margin-bottom: 10px !important;
+    }
+
+    .dashboard-header h3 {
+        font-size: 13px !important;
+    }
+
+    .dashboard-user {
+        font-size: 7px !important;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 6px !important;
+    }
+
+    .stat-card {
+        padding: 8px !important;
+        border-radius: 7px !important;
+    }
+
+    .stat-card small {
+        font-size: 6px !important;
+    }
+
+    .stat-card strong {
+        font-size: 10px !important;
+    }
+
+    .stat-card span {
+        font-size: 5px !important;
+    }
+
+    .dashboard-charts {
+        grid-template-columns: 1.2fr 1fr !important;
+        gap: 7px !important;
+    }
+
+    .chart-card {
+        padding: 8px !important;
+    }
+
+    .fake-chart {
+        height: 68px !important;
+    }
+
+    .category-chart {
+        display: block !important;
+    }
+
+    .donut {
+        width: 54px !important;
+        height: 54px !important;
+    }
+
+    .donut::before {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .recent-transactions {
+        display: block !important;
+    }
+}
+
+@media (max-width: 430px) {
+    .container {
+        width: min(100% - 28px, 390px);
+    }
+
+    .hero {
+        padding-top: 38px;
+    }
+
+    .hero-container {
+        gap: 32px;
+    }
+
+    .hero h1 {
+        font-size: clamp(35px, 10.5vw, 44px);
+    }
+
+    .hero-description {
+        font-size: 13.5px;
+        line-height: 1.62;
+    }
+
+    .dashboard-window {
+        width: min(100%, 350px) !important;
+        max-width: 350px !important;
+    }
+
+    .dashboard-main {
+        padding: 11px !important;
+    }
+
+    .dashboard-charts {
+        gap: 5px !important;
+    }
+
+    .chart-card {
+        padding: 6px !important;
+    }
+
+    .fake-chart {
+        height: 58px !important;
+    }
+
+    .donut {
+        width: 46px !important;
+        height: 46px !important;
+    }
+
+    .donut::before {
+        width: 30px !important;
+        height: 30px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        width: calc(100% - 24px);
+    }
+
+    .hero {
+        padding-top: 32px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .dashboard-window {
+        width: min(100%, 320px) !important;
+        max-width: 320px !important;
+    }
+
+    .hero-benefits {
+        gap: 3px;
+    }
+
+    .benefit {
+        padding: 0 4px;
+    }
+}

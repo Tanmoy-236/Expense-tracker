@@ -7,6 +7,18 @@
     <title>Create Account - ExpenseTracker</title>
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/signup.css">
+    <!-- A signed-in user should never be shown the signup page. -->
+    <script>
+        (function () {
+            try {
+                const raw = localStorage.getItem("expenseTrackerAuth") || sessionStorage.getItem("expenseTrackerAuth");
+                if (raw && JSON.parse(raw).email) window.location.replace("dashboard.html");
+            } catch (error) {
+                localStorage.removeItem("expenseTrackerAuth");
+                sessionStorage.removeItem("expenseTrackerAuth");
+            }
+        })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">

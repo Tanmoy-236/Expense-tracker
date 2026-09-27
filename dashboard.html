@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ExpenseTracker</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script>
+        (function () {
+            const auth =
+                localStorage.getItem("expenseTrackerAuth") ||
+                sessionStorage.getItem("expenseTrackerAuth");
+
+            if (!auth) {
+                window.location.replace("login.html");
+            }
+        })();
+    </script>
+</head>
+<body data-protected="true">
+
+<header class="app-header">
+    <a href="dashboard.html" class="app-logo">
+        <span class="leaf-logo"></span>
+        <span>Expense<span>Tracker</span></span>
+    </a>
+
+    <div class="user-area">
+        <span id="welcomeUser">Welcome back</span>
+        <button id="logoutButton" type="button">Logout</button>
+    </div>
+</header>
+
+<main class="dashboard-placeholder">
+    <div class="placeholder-card">
+        <span class="placeholder-icon">▦</span>
+        <p class="eyebrow">EXPENSETRACKER</p>
+        <h1>Dashboard</h1>
+        <p>
+            You're successfully logged in. This is the protected dashboard area.
+            The full Dashboard, Transactions, Budgets, Categories, Reports and Goals
+            pages can now be built here.
+        </p>
+
+        <div class="quick-info">
+            <div>
+                <small>Signed in as</small>
+                <strong id="userEmail">—</strong>
+            </div>
+            <div>
+                <small>Session</small>
+                <strong id="sessionType">—</strong>
+            </div>
+        </div>
+
+        <button class="logout-primary" id="logoutButtonMain" type="button">Log out</button>
+    </div>
+</main>
+
+<script src="js/auth.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const auth = window.ExpenseTrackerAuth.getStoredAuth();
+
+        if (!auth) return;
+
+        document.getElementById("welcomeUser").textContent = "Hi, " + (auth.name || "there");
+        document.getElementById("userEmail").textContent = auth.email;
+
+        const remembered = Boolean(localStorage.getItem("expenseTrackerAuth"));
+        document.getElementById("sessionType").textContent =
+            remembered ? "Remembered" : "This session";
+
+        document.getElementById("logoutButton").addEventListener("click", window.ExpenseTrackerAuth.logout);
+        document.getElementById("logoutButtonMain").addEventListener("click", window.ExpenseTrackerAuth.logout);
+    });
+</script>
+</body>
+</html>
